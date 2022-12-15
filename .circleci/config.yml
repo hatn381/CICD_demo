@@ -41,8 +41,6 @@ configure_infrastructure:
           ansible-playbook -i inventory main-remote.yml
 # Sequential workflow
 workflows:
-  # Name the workflow
-  myWorkflow:
-    jobs:
-      # - create_infrastructure
-      - configure_infrastructure
+  jobs:
+    # - create_infrastructure
+    - configure_infrastructure
